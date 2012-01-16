@@ -7,6 +7,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -14,7 +16,7 @@ import android.widget.Toast;
 public class WizkidsActivity extends Activity {
 	private ArrayList<ImageView> images;
 	private ArrayList<Button> buttons;
-	private ArrayList<Integer> hidden_indexes;
+	private ArrayList<Integer> stack;
 	Random _myRand;
 
 	@Override
@@ -24,7 +26,7 @@ public class WizkidsActivity extends Activity {
 
 		images = new ArrayList<ImageView>();
 		buttons = new ArrayList<Button>();
-		hidden_indexes = new ArrayList<Integer>();
+		stack = new ArrayList<Integer>();
 		_myRand = new Random();
 
 		images.add((ImageView)findViewById(R.id.img0));
@@ -69,6 +71,10 @@ public class WizkidsActivity extends Activity {
 		buttons.add((Button)findViewById(R.id.b2));
 		buttons.add((Button)findViewById(R.id.b3));
 		buttons.add((Button)findViewById(R.id.b4));
+		
+		final Animation _myAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
+		images.get(0).clearAnimation();
+		images.get(0).startAnimation(_myAnim);
 
 		Integer number = _myRand.nextInt(36);
 		Integer correct_answer =  36 - number;
@@ -76,21 +82,21 @@ public class WizkidsActivity extends Activity {
 		
 		do	{
 			Integer index = _myRand.nextInt(36);
-			if(!(hidden_indexes.contains(index)))	{
+			if(!(stack.contains(index)))	{
 				images.get(index).setVisibility(View.INVISIBLE);
-				hidden_indexes.add(index);
+				stack.add(index);
 				i++;
 			}
 		}	while(i != number);
 		
-		hidden_indexes.clear();
+		stack.clear();
 		i = 0;
 		
 		do	{
 			Integer answer = _myRand.nextInt(36);
-			if(!(hidden_indexes.contains(answer)) && answer != (correct_answer))	{
+			if(!(stack.contains(answer)) && answer != (correct_answer))	{
 				buttons.get(i).setText(String.valueOf(answer));
-				hidden_indexes.add(answer);
+				stack.add(answer);
 				i++;
 			}
 		} while (i != 5);
