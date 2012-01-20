@@ -3,5 +3,6 @@
 
     <string name="hello">Hello World, WizkidsActivity!</string>
     <string name="app_name">Wizkids</string>
+    <string name="x">x</string>
 
 </resources>

@@ -23,42 +23,42 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" >
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -81,42 +81,42 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" >
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -140,42 +140,42 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" >
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -196,42 +196,42 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" >
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img23"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -252,42 +252,42 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" >
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img26"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img27"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img29"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -308,42 +308,42 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" >
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img31"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img32"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img33"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img34"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
 
-                <ImageView
+                <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img35"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -367,7 +367,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:height="50dip"
-            android:text="X"
+            android:text="@string/x"
             android:textStyle="bold" />
 
         <Button
@@ -376,8 +376,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:height="50dip"
-            android:text="X"
-            android:textStyle="bold" />
+            android:textStyle="bold" android:text="@string/x"/>
 
         <Button
             android:id="@+id/b2"
@@ -385,8 +384,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:height="50dip"
-            android:text="X"
-            android:textStyle="bold" />
+            android:textStyle="bold" android:text="@string/x"/>
 
         <Button
             android:id="@+id/b3"
@@ -394,7 +392,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:height="50dip"
-            android:text="X"
+            android:text="@string/x"
             android:textStyle="bold" />
 
         <Button
@@ -403,7 +401,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:height="50dip"
-            android:text="X"
+            android:text="@string/x"
             android:textStyle="bold" />
 
     </LinearLayout>

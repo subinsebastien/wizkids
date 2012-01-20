@@ -10,61 +10,65 @@ import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-public class WizkidsActivity extends Activity {
-	private ArrayList<ImageView> images;
+
+public class WizkidsActivity extends Activity	{
+	private ArrayList<AnimatedImage> images;
 	private ArrayList<Button> buttons;
 	private ArrayList<Integer> stack;
 	Random _myRand;
+	Animation _rotate;
+	Animation _invis;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		images = new ArrayList<ImageView>();
-		buttons = new ArrayList<Button>();
-		stack = new ArrayList<Integer>();
-		_myRand = new Random();
+		images	= new ArrayList<AnimatedImage>();
+		buttons	= new ArrayList<Button>();
+		stack	= new ArrayList<Integer>();
+		_myRand	= new Random();
+		_invis	= AnimationUtils.loadAnimation(getApplicationContext(), R.anim.invis);
+		_rotate = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
 
-		images.add((ImageView)findViewById(R.id.img0));
-		images.add((ImageView)findViewById(R.id.img1));
-		images.add((ImageView)findViewById(R.id.img2));
-		images.add((ImageView)findViewById(R.id.img3));
-		images.add((ImageView)findViewById(R.id.img4));
-		images.add((ImageView)findViewById(R.id.img5));
-		images.add((ImageView)findViewById(R.id.img6));
-		images.add((ImageView)findViewById(R.id.img7));
-		images.add((ImageView)findViewById(R.id.img8));
-		images.add((ImageView)findViewById(R.id.img9));
-		images.add((ImageView)findViewById(R.id.img10));
-		images.add((ImageView)findViewById(R.id.img11));
-		images.add((ImageView)findViewById(R.id.img12));
-		images.add((ImageView)findViewById(R.id.img13));
-		images.add((ImageView)findViewById(R.id.img14));
-		images.add((ImageView)findViewById(R.id.img15));
-		images.add((ImageView)findViewById(R.id.img16));
-		images.add((ImageView)findViewById(R.id.img17));
-		images.add((ImageView)findViewById(R.id.img18));
-		images.add((ImageView)findViewById(R.id.img19));
-		images.add((ImageView)findViewById(R.id.img20));
-		images.add((ImageView)findViewById(R.id.img21));
-		images.add((ImageView)findViewById(R.id.img22));
-		images.add((ImageView)findViewById(R.id.img23));
-		images.add((ImageView)findViewById(R.id.img24));
-		images.add((ImageView)findViewById(R.id.img25));
-		images.add((ImageView)findViewById(R.id.img26));
-		images.add((ImageView)findViewById(R.id.img27));
-		images.add((ImageView)findViewById(R.id.img28));
-		images.add((ImageView)findViewById(R.id.img29));
-		images.add((ImageView)findViewById(R.id.img30));
-		images.add((ImageView)findViewById(R.id.img31));
-		images.add((ImageView)findViewById(R.id.img32));
-		images.add((ImageView)findViewById(R.id.img33));
-		images.add((ImageView)findViewById(R.id.img34));
-		images.add((ImageView)findViewById(R.id.img35));
+		images.add((AnimatedImage)findViewById(R.id.img0));
+		images.add((AnimatedImage)findViewById(R.id.img1));
+		images.add((AnimatedImage)findViewById(R.id.img2));
+		images.add((AnimatedImage)findViewById(R.id.img3));
+		images.add((AnimatedImage)findViewById(R.id.img4));
+		images.add((AnimatedImage)findViewById(R.id.img5));
+		images.add((AnimatedImage)findViewById(R.id.img6));
+		images.add((AnimatedImage)findViewById(R.id.img7));
+		images.add((AnimatedImage)findViewById(R.id.img8));
+		images.add((AnimatedImage)findViewById(R.id.img9));
+		images.add((AnimatedImage)findViewById(R.id.img10));
+		images.add((AnimatedImage)findViewById(R.id.img11));
+		images.add((AnimatedImage)findViewById(R.id.img12));
+		images.add((AnimatedImage)findViewById(R.id.img13));
+		images.add((AnimatedImage)findViewById(R.id.img14));
+		images.add((AnimatedImage)findViewById(R.id.img15));
+		images.add((AnimatedImage)findViewById(R.id.img16));
+		images.add((AnimatedImage)findViewById(R.id.img17));
+		images.add((AnimatedImage)findViewById(R.id.img18));
+		images.add((AnimatedImage)findViewById(R.id.img19));
+		images.add((AnimatedImage)findViewById(R.id.img20));
+		images.add((AnimatedImage)findViewById(R.id.img21));
+		images.add((AnimatedImage)findViewById(R.id.img22));
+		images.add((AnimatedImage)findViewById(R.id.img23));
+		images.add((AnimatedImage)findViewById(R.id.img24));
+		images.add((AnimatedImage)findViewById(R.id.img25));
+		images.add((AnimatedImage)findViewById(R.id.img26));
+		images.add((AnimatedImage)findViewById(R.id.img27));
+		images.add((AnimatedImage)findViewById(R.id.img28));
+		images.add((AnimatedImage)findViewById(R.id.img29));
+		images.add((AnimatedImage)findViewById(R.id.img30));
+		images.add((AnimatedImage)findViewById(R.id.img31));
+		images.add((AnimatedImage)findViewById(R.id.img32));
+		images.add((AnimatedImage)findViewById(R.id.img33));
+		images.add((AnimatedImage)findViewById(R.id.img34));
+		images.add((AnimatedImage)findViewById(R.id.img35));
 
 		buttons.add((Button)findViewById(R.id.b0));
 		buttons.add((Button)findViewById(R.id.b1));
@@ -72,22 +76,28 @@ public class WizkidsActivity extends Activity {
 		buttons.add((Button)findViewById(R.id.b3));
 		buttons.add((Button)findViewById(R.id.b4));
 		
-		final Animation _myAnim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
-		images.get(0).clearAnimation();
-		images.get(0).startAnimation(_myAnim);
 
-		Integer number = _myRand.nextInt(36);
-		Integer correct_answer =  36 - number;
-		Integer i = 0;
+		int number = _myRand.nextInt(36);
+		int correct_answer =  36 - number;
+		int i = 0;
 		
 		do	{
-			Integer index = _myRand.nextInt(36);
-			if(!(stack.contains(index)))	{
+			int index = _myRand.nextInt(36);
+			if(images.get(index).isVisib())	{
 				images.get(index).setVisibility(View.INVISIBLE);
-				stack.add(index);
+				images.get(index).setVisib(false);
 				i++;
 			}
 		}	while(i != number);
+		
+		
+		
+		for(AnimatedImage image : images)	{
+			if(image.isVisib())
+				image.startAnimation(_rotate);
+			else
+				image.startAnimation(_invis);
+		}
 		
 		stack.clear();
 		i = 0;
@@ -108,6 +118,6 @@ public class WizkidsActivity extends Activity {
 			public void onClick(View v) {
 				Toast.makeText(getApplication(), "Correct Answer", Toast.LENGTH_SHORT).show();
 			}
-		});
+		});		
 	}
 }
