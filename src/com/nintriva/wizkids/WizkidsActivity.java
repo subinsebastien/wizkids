@@ -19,7 +19,6 @@ public class WizkidsActivity extends Activity	{
 	private ArrayList<Integer> stack;
 	Random _myRand;
 	Animation _rotate;
-	Animation _invis;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,6 @@ public class WizkidsActivity extends Activity	{
 		buttons	= new ArrayList<Button>();
 		stack	= new ArrayList<Integer>();
 		_myRand	= new Random();
-		_invis	= AnimationUtils.loadAnimation(getApplicationContext(), R.anim.invis);
 		_rotate = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
 
 		images.add((AnimatedImage)findViewById(R.id.img0));
@@ -78,33 +76,27 @@ public class WizkidsActivity extends Activity	{
 		
 
 		int number = _myRand.nextInt(36);
-		int correct_answer =  36 - number;
 		int i = 0;
-		
+
 		do	{
 			int index = _myRand.nextInt(36);
-			if(images.get(index).isVisib())	{
-				images.get(index).setVisibility(View.INVISIBLE);
-				images.get(index).setVisib(false);
+			if(!images.get(index).isVisib())	{
+				images.get(index).setVisib(true);
+				images.get(index).set_myAnim(_rotate); //set some random animations here
 				i++;
 			}
 		}	while(i != number);
-		
-		
-		
+
 		for(AnimatedImage image : images)	{
-			if(image.isVisib())
-				image.startAnimation(_rotate);
-			else
-				image.startAnimation(_invis);
+			image.start_myAnim();
 		}
-		
+
 		stack.clear();
 		i = 0;
 		
 		do	{
 			Integer answer = _myRand.nextInt(36);
-			if(!(stack.contains(answer)) && answer != (correct_answer))	{
+			if(!(stack.contains(answer)) && answer != (number))	{
 				buttons.get(i).setText(String.valueOf(answer));
 				stack.add(answer);
 				i++;
@@ -112,7 +104,7 @@ public class WizkidsActivity extends Activity	{
 		} while (i != 5);
 		
 		i = _myRand.nextInt(5);
-		buttons.get(i).setText(String.valueOf(correct_answer));
+		buttons.get(i).setText(String.valueOf(number));
 		buttons.get(i).setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
