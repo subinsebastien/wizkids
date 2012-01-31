@@ -383,10 +383,9 @@
                 android:id="@+id/b0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/img_background"
-                android:height="50dip"
-                android:text="@string/x"
-                android:textStyle="bold" />
+                android:background="@drawable/btn_bg"
+                android:text="@string/x" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -400,10 +399,8 @@
                 android:id="@+id/b1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/img_background"
-                android:height="50dip"
-                android:text="@string/x"
-                android:textStyle="bold" />
+                android:background="@drawable/btn_bg"
+                android:text="@string/x"/>
         </LinearLayout>
 
         <LinearLayout
@@ -417,10 +414,8 @@
                 android:id="@+id/b2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/img_background"
-                android:height="50dip"
-                android:text="@string/x"
-                android:textStyle="bold" />
+                android:background="@drawable/btn_bg"
+                android:text="@string/x"/>
         </LinearLayout>
 
         <LinearLayout
@@ -434,10 +429,8 @@
                 android:id="@+id/b3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/img_background"
-                android:height="50dip"
-                android:text="@string/x"
-                android:textStyle="bold" />
+                android:background="@drawable/btn_bg"
+                android:text="@string/x"/>
         </LinearLayout>
 
         <LinearLayout
@@ -451,10 +444,8 @@
                 android:id="@+id/b4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/img_background"
-                android:height="50dip"
-                android:text="@string/x"
-                android:textStyle="bold" />
+                android:background="@drawable/btn_bg"
+                android:text="@string/x"/>
         </LinearLayout>
     </LinearLayout>
 
