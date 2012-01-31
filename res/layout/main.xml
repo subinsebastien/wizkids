@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/main_background"
     android:baselineAligned="false"
-    >
+    android:orientation="vertical" >
 
     <TableLayout
         android:id="@+id/tableLayout1"
@@ -15,7 +15,8 @@
             android:id="@+id/tableRow0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" >
+            android:layout_weight="1"
+            android:gravity="center" >
 
             <LinearLayout
                 android:id="@+id/ll0"
@@ -73,7 +74,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1" >
+            android:layout_weight="1"
+            android:gravity="center" >
 
             <LinearLayout
                 android:id="@+id/ll1"
@@ -132,7 +134,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1" >
+            android:layout_weight="1"
+            android:gravity="center" >
 
             <LinearLayout
                 android:id="@+id/ll2"
@@ -188,7 +191,9 @@
         <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
 
             <LinearLayout
                 android:id="@+id/ll3"
@@ -244,7 +249,9 @@
         <TableRow
             android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
 
             <LinearLayout
                 android:id="@+id/ll4"
@@ -300,7 +307,9 @@
         <TableRow
             android:id="@+id/tableRow5"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
 
             <LinearLayout
                 android:id="@+id/ll5"
@@ -359,51 +368,94 @@
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:padding="10dip">
+        android:layout_height="wrap_content"
+        android:background="@drawable/answer_bg"
+        android:padding="10dip" >
 
-        <Button
-            android:id="@+id/b0"
+        <LinearLayout
+            android:id="@+id/LinearLayout01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:height="50dip"
-            android:text="@string/x"
-            android:textStyle="bold" />
+            android:gravity="center" >
 
-        <Button
-            android:id="@+id/b1"
+            <Button
+                android:id="@+id/b0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_background"
+                android:height="50dip"
+                android:text="@string/x"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:height="50dip"
-            android:textStyle="bold" android:text="@string/x"/>
+            android:gravity="center" >
 
-        <Button
-            android:id="@+id/b2"
+            <Button
+                android:id="@+id/b1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_background"
+                android:height="50dip"
+                android:text="@string/x"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:height="50dip"
-            android:textStyle="bold" android:text="@string/x"/>
+            android:gravity="center" >
 
-        <Button
-            android:id="@+id/b3"
+            <Button
+                android:id="@+id/b2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_background"
+                android:height="50dip"
+                android:text="@string/x"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:height="50dip"
-            android:text="@string/x"
-            android:textStyle="bold" />
+            android:gravity="center" >
 
-        <Button
-            android:id="@+id/b4"
+            <Button
+                android:id="@+id/b3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_background"
+                android:height="50dip"
+                android:text="@string/x"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:height="50dip"
-            android:text="@string/x"
-            android:textStyle="bold" />
+            android:gravity="center" >
 
+            <Button
+                android:id="@+id/b4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_background"
+                android:height="50dip"
+                android:text="@string/x"
+                android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

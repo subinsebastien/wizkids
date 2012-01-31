@@ -105,7 +105,7 @@ public class WizkidsActivity extends Activity	{
 		
 		i = _myRand.nextInt(5);
 		buttons.get(i).setText(String.valueOf(number));
-		buttons.get(i).setOnClickListener(new OnClickListener() {			
+		buttons.get(i).setOnClickListener(new View.OnClickListener() {			
 			@Override
 			public void onClick(View v) {
 				Toast.makeText(getApplication(), "Correct Answer", Toast.LENGTH_SHORT).show();
