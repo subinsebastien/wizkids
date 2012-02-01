@@ -4,15 +4,17 @@
     android:layout_height="fill_parent"
     android:background="@drawable/main_background"
     android:baselineAligned="false"
-    android:orientation="vertical" >
+    android:orientation="vertical" android:padding="10dip">
 
     <TableLayout
-        android:id="@+id/tableLayout1"
+        android:id="@+id/puzzle_wrapper"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:layout_weight="1" android:padding="5dip">
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
 
         <TableRow
-            android:id="@+id/tableRow0"
+            android:id="@+id/tr0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -70,10 +72,9 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow1"
+            android:id="@+id/tr1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center" >
 
@@ -81,7 +82,8 @@
                 android:id="@+id/ll1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" >
+                android:layout_weight="1"
+                android:gravity="center" >
 
                 <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img6"
@@ -124,16 +126,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
-
             </LinearLayout>
-
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow2"
+            android:id="@+id/tr2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center" >
 
@@ -141,7 +140,8 @@
                 android:id="@+id/ll2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" >
+                android:layout_weight="1"
+                android:gravity="center" >
 
                 <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img12"
@@ -185,11 +185,10 @@
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
             </LinearLayout>
-
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow3"
+            android:id="@+id/tr3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -199,7 +198,8 @@
                 android:id="@+id/ll3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" >
+                android:layout_weight="1"
+                android:gravity="center" >
 
                 <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img18"
@@ -243,11 +243,10 @@
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
             </LinearLayout>
-
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow4"
+            android:id="@+id/tr4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -257,7 +256,8 @@
                 android:id="@+id/ll4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" >
+                android:layout_weight="1"
+                android:gravity="center" >
 
                 <com.nintriva.wizkids.AnimatedImage
                     android:id="@+id/img24"
@@ -301,11 +301,10 @@
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
             </LinearLayout>
-
         </TableRow>
 
         <TableRow
-            android:id="@+id/tableRow5"
+            android:id="@+id/tr5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -358,22 +357,20 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/icq" />
-
             </LinearLayout>
-
         </TableRow>
 
     </TableLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout1"
+        android:id="@+id/answer_wrapper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/answer_bg"
-        android:padding="10dip" >
+        android:padding="15dip" >
 
         <LinearLayout
-            android:id="@+id/LinearLayout01"
+            android:id="@+id/ans_0_wrapper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -389,7 +386,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout2"
+            android:id="@+id/ans_1_wrapper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -404,7 +401,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout3"
+            android:id="@+id/ans_2_wrapper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -419,7 +416,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout4"
+            android:id="@+id/ans_3_wrapper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -434,7 +431,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout5"
+            android:id="@+id/ans_4_wrapper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

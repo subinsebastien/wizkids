@@ -6,7 +6,6 @@ import java.util.Random;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -17,8 +16,8 @@ public class WizkidsActivity extends Activity	{
 	private ArrayList<AnimatedImage> images;
 	private ArrayList<Button> buttons;
 	private ArrayList<Integer> stack;
+	private ArrayList<Animation> animations;
 	Random _myRand;
-	Animation _rotate;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -28,9 +27,9 @@ public class WizkidsActivity extends Activity	{
 		images	= new ArrayList<AnimatedImage>();
 		buttons	= new ArrayList<Button>();
 		stack	= new ArrayList<Integer>();
+		animations = new ArrayList<Animation>();
 		_myRand	= new Random();
-		_rotate = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
-
+		
 		images.add((AnimatedImage)findViewById(R.id.img0));
 		images.add((AnimatedImage)findViewById(R.id.img1));
 		images.add((AnimatedImage)findViewById(R.id.img2));
@@ -74,6 +73,9 @@ public class WizkidsActivity extends Activity	{
 		buttons.add((Button)findViewById(R.id.b3));
 		buttons.add((Button)findViewById(R.id.b4));
 		
+		animations.add(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate));
+		animations.add(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale));
+		animations.add(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink));
 
 		int number = _myRand.nextInt(36);
 		int i = 0;
@@ -82,7 +84,7 @@ public class WizkidsActivity extends Activity	{
 			int index = _myRand.nextInt(36);
 			if(!images.get(index).isVisib())	{
 				images.get(index).setVisib(true);
-				images.get(index).set_myAnim(_rotate); //set some random animations here
+				images.get(index).set_myAnim(animations.get(_myRand.nextInt(3))); //set some random animations here
 				i++;
 			}
 		}	while(i != number);
@@ -106,7 +108,6 @@ public class WizkidsActivity extends Activity	{
 		i = _myRand.nextInt(5);
 		buttons.get(i).setText(String.valueOf(number));
 		buttons.get(i).setOnClickListener(new View.OnClickListener() {
-
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				Toast.makeText(getApplication(), "Correct Answer", Toast.LENGTH_SHORT).show();
