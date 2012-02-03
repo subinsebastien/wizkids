@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import android.app.Activity;
-import android.content.res.Configuration;
+import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -12,13 +16,30 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Toast;
 
-
-public class WizkidsActivity extends Activity	{
+public class WizkidsActivity extends Activity	implements SensorEventListener {
 	private ArrayList<AnimatedImage> images;
 	private ArrayList<Button> buttons;
 	private ArrayList<Integer> stack;
 	private ArrayList<Animation> animations;
+	private SensorManager _mySensorManager;
 	Random _myRand;
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		_mySensorManager.registerListener(this, _mySensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
+	}
+
+
+
+	@Override
+	protected void onStop() {
+		_mySensorManager.unregisterListener(this);
+		super.onStop();
+	}
+	
+
+
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -30,6 +51,7 @@ public class WizkidsActivity extends Activity	{
 		stack	= new ArrayList<Integer>();
 		animations = new ArrayList<Animation>();
 		_myRand	= new Random();
+		_mySensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
 		
 		images.add((AnimatedImage)findViewById(R.id.img0));
 		images.add((AnimatedImage)findViewById(R.id.img1));
@@ -110,10 +132,19 @@ public class WizkidsActivity extends Activity	{
 		buttons.get(i).setText(String.valueOf(number));
 		buttons.get(i).setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
 				Toast.makeText(getApplication(), "Correct Answer", Toast.LENGTH_SHORT).show();
 			}			
 
 		});		
+	}
+
+	public void onAccuracyChanged(Sensor s, int arg1) {}
+
+	public void onSensorChanged(SensorEvent se) {
+		if(se.values[0] > 10 || se.values[1] > 10 || se.values[2] > 10)	{
+			Intent intent = getIntent();
+			finish();
+			startActivity(intent);
+		}
 	}
 }
